@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd simulator && npm run build",
+  "outputDirectory": "simulator/build",
+  "installCommand": "cd simulator && npm install"
+}
