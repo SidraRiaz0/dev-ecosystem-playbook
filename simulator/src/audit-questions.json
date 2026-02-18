@@ -1,1 +1,75 @@
-../../data/audit-questions.json
+{
+  "audit_metadata": {
+    "version": "1.1",
+    "framework": "DevEx-Revenue-Link",
+    "author": "Sidra"
+  },
+  "categories": [
+    {
+      "id": "onboarding",
+      "label": "Onboarding Friction",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "How many clicks to find the 'npm install' or 'curl' command?",
+          "options": [
+            { "label": "1-2 clicks", "score_impact": 10, "feedback": "Excellent visibility." },
+            { "label": "3-5 clicks", "score_impact": 5, "feedback": "Minor friction detected." },
+            { "label": "Hidden in docs", "score_impact": 0, "feedback": "High risk of funnel drop-off." }
+          ],
+          "revenue_leakage_weight": 0.15
+        },
+        {
+          "id": "q2",
+          "text": "Is a credit card required for the free tier?",
+          "options": [
+            { "label": "No card required", "score_impact": 10, "feedback": "Low barrier to entry." },
+            { "label": "Card required", "score_impact": 0, "feedback": "Estimated 40% conversion loss." }
+          ],
+          "revenue_leakage_weight": 0.40
+        }
+      ]
+    },
+    {
+      "id": "documentation",
+      "label": "Documentation Quality",
+      "questions": [
+        {
+          "id": "q3",
+          "text": "Do your docs explain exactly how to fix a 401 Unauthorized error?",
+          "options": [
+            { "label": "Yes, with examples", "score_impact": 10, "feedback": "Self-serve success." },
+            { "label": "No, just the status", "score_impact": 2, "feedback": "Increases support ticket volume." }
+          ],
+          "revenue_leakage_weight": 0.10
+        }
+      ]
+    },
+    {
+      "id": "retention_and_support",
+      "label": "Ecosystem Trust & Support",
+      "questions": [
+        {
+          "id": "q4",
+          "text": "What is the 'Time-to-Human' response in your community (Slack/Discord/GitHub)?",
+          "options": [
+            { "label": "Under 4 hours", "score_impact": 10, "feedback": "High-trust ecosystem." },
+            { "label": "24+ hours", "score_impact": 5, "feedback": "Risk of developer churn." },
+            { "label": "The 'Ghost Town' (No response)", "score_impact": 0, "feedback": "Critical failure; community is a liability." }
+          ],
+          "revenue_leakage_weight": 0.25
+        },
+        {
+          "id": "q5",
+          "text": "How do you handle Breaking Changes in your API?",
+          "options": [
+            { "label": "Versioned URLs + 6 month sunset", "score_impact": 10, "feedback": "Enterprise-ready stability." },
+            { "label": "Email notification only", "score_impact": 4, "feedback": "Operational risk for users." },
+            { "label": "Silent updates (Just ship it)", "score_impact": 0, "feedback": "Maximum friction; high abandonment rate." }
+          ],
+          "revenue_leakage_weight": 0.30
+        }
+      ]
+    }
+  ]
+}
