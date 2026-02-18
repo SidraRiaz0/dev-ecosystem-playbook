@@ -13,7 +13,7 @@ Currently pursuing a **Dual MS in AI and Business Analytics**, I built this proj
 
 ## 🛠️ Project Components
 1. **The Playbook:** A structured guide on GTM strategy, developer onboarding audits, and community scaling.
-2. **The Simulator (Live Demo):** An interactive web game that "stress tests" a product's developer readiness.
+2. **The Simulator (Live Demo):** https://dev-ecosystem-playbook.vercel.app — An interactive web game that "stress tests" a product's developer readiness.
 3. **The Analytics Engine:** Mathematical models (LaTeX) to calculate CAC Efficiency and Support Deflection ROI.
 
 ---
