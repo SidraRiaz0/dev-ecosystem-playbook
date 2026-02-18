@@ -1,6 +1,6 @@
 {
   "audit_metadata": {
-    "version": "1.0",
+    "version": "1.1",
     "framework": "DevEx-Revenue-Link",
     "author": "Sidra"
   },
@@ -42,6 +42,32 @@
             { "label": "No, just the status", "score_impact": 2, "feedback": "Increases support ticket volume." }
           ],
           "revenue_leakage_weight": 0.10
+        }
+      ]
+    },
+    {
+      "id": "retention_and_support",
+      "label": "Ecosystem Trust & Support",
+      "questions": [
+        {
+          "id": "q4",
+          "text": "What is the 'Time-to-Human' response in your community (Slack/Discord/GitHub)?",
+          "options": [
+            { "label": "Under 4 hours", "score_impact": 10, "feedback": "High-trust ecosystem." },
+            { "label": "24+ hours", "score_impact": 5, "feedback": "Risk of developer churn." },
+            { "label": "The 'Ghost Town' (No response)", "score_impact": 0, "feedback": "Critical failure; community is a liability." }
+          ],
+          "revenue_leakage_weight": 0.25
+        },
+        {
+          "id": "q5",
+          "text": "How do you handle Breaking Changes in your API?",
+          "options": [
+            { "label": "Versioned URLs + 6 month sunset", "score_impact": 10, "feedback": "Enterprise-ready stability." },
+            { "label": "Email notification only", "score_impact": 4, "feedback": "Operational risk for users." },
+            { "label": "Silent updates (Just ship it)", "score_impact": 0, "feedback": "Maximum friction; high abandonment rate." }
+          ],
+          "revenue_leakage_weight": 0.30
         }
       ]
     }
